@@ -18,9 +18,15 @@ class Discover extends StatelessWidget {
                 children: [
                   Expanded(
                       child: Stack(children: [
-                    Container(
+                    ClipRRect(
                       child: Image.asset('images/Rectangle 166.png'),
                     ),
+                        Column(
+                          children: [
+                            Image.asset('images/robert-bye-tG36rvCeqng-unsplash-removebg-preview 5.png'),
+
+                          ],
+                        )
                   ])),
                   Expanded(
                       child: Stack(children: [
