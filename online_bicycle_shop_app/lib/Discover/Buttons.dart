@@ -11,7 +11,7 @@ class Buttons extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
         child: Container(
-          margin: EdgeInsets.only(bottom: marginNumber),
+          padding: EdgeInsets.only(bottom: marginNumber),
           child: Transform.scale(scale: scale, child: Image.asset(path)),
         ));
   }

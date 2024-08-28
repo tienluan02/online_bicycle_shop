@@ -9,8 +9,29 @@ class Discover extends StatelessWidget {
       body: SafeArea(
         child: Stack(
           children: [
-            BackGround(upper: 150, leftNumber: 120, path: 'images/Rectangle 474.png'),
+            BackGround(
+                upper: 150, leftNumber: 120, path: 'images/Rectangle 474.png'),
             BackGround(upper: 0, leftNumber: 10, path: 'images/background.png'),
+            Container(
+              margin: EdgeInsets.only(top: 400, left: 20),
+              child: Row(
+                children: [
+                  Expanded(
+                      child: Stack(children: [
+                    Container(
+                      child: Image.asset('images/Rectangle 166.png'),
+                    ),
+                  ])),
+                  Expanded(
+                      child: Stack(children: [
+                    Container(
+                      margin: EdgeInsets.only(bottom: 100),
+                      child: Image.asset('images/Rectangle 167.png'),
+                    ),
+                  ]))
+                ],
+              ),
+            ),
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Column(
@@ -51,15 +72,15 @@ class Discover extends StatelessWidget {
                                   'images/Electric%20Bicycle.I05 2.png'),
                             ),
                             Align(
-                                alignment: Alignment.bottomLeft,
-                                child: Text(
-                                  '30% Off',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 25,
-                                    color: Color(0xFFA7ABB1),
-                                  ),
+                              alignment: Alignment.bottomLeft,
+                              child: Text(
+                                '30% Off',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 25,
+                                  color: Color(0xFFA7ABB1),
                                 ),
+                              ),
                             ),
                           ],
                         ),
@@ -68,14 +89,31 @@ class Discover extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      Buttons(scale: 1.7,marginNumber: 0, path: 'images/Allbutton.png',),
-                      Buttons(scale: 1.7,marginNumber: 25, path: 'images/BikeButton.png',),
-                      Buttons(scale: 1.7,marginNumber: 50, path: 'images/Road.png',),
-                      Buttons(scale: 1.2,marginNumber: 75, path: 'images/Mountain.png'),
-                      Buttons(scale: 1.2, marginNumber: 100, path: 'images/HelmetButton.png'),
+                      Buttons(
+                        scale: 1.7,
+                        marginNumber: 0,
+                        path: 'images/Allbutton.png',
+                      ),
+                      Buttons(
+                        scale: 1.7,
+                        marginNumber: 25,
+                        path: 'images/BikeButton.png',
+                      ),
+                      Buttons(
+                        scale: 1.7,
+                        marginNumber: 50,
+                        path: 'images/Road.png',
+                      ),
+                      Buttons(
+                          scale: 1.2,
+                          marginNumber: 75,
+                          path: 'images/Mountain.png'),
+                      Buttons(
+                          scale: 1.2,
+                          marginNumber: 100,
+                          path: 'images/HelmetButton.png'),
                     ],
                   ),
-                  // Image.asset('images/Rectangle 166.png'),
                 ],
               ),
             ),
