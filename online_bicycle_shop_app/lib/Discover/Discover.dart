@@ -75,15 +75,15 @@ class Discover extends StatelessWidget {
                     children: [
                       Expanded(
                           child: Container(
-                        child: Transform.scale(scale: 1.2, child: Image.asset('images/Allbutton.png')),
+                        child: Transform.scale(scale: 1.7, child: Image.asset('images/Allbutton.png')),
                       )),
                       Expanded(child: Container(
                         margin: EdgeInsets.only(bottom: 25),
-                        child: Transform.scale(scale: 1.2, child: Image.asset('images/BikeButton.png')),
+                        child: Transform.scale(scale: 1.7, child: Image.asset('images/BikeButton.png')),
                       )),
                       Expanded(child: Container(
                         margin: EdgeInsets.only(bottom: 50),
-                        child: Transform.scale(scale: 1.2, child: Image.asset('images/Road.png')),
+                        child: Transform.scale(scale: 1.7, child: Image.asset('images/Road.png')),
                       )),
                       Expanded(child: Container(
                         margin: EdgeInsets.only(bottom: 75),
