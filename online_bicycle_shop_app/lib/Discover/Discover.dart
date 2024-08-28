@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Buttons.dart';
 
 class Discover extends StatelessWidget {
   @override
@@ -8,14 +9,8 @@ class Discover extends StatelessWidget {
       body: SafeArea(
         child: Stack(
           children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 150, left: 120),
-              child: Image.asset('images/Rectangle 474.png'),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 10.0),
-              child: Image.asset('images/background.png'),
-            ),
+            BackGround(upper: 150, leftNumber: 120, path: 'images/Rectangle 474.png'),
+            BackGround(upper: 0, leftNumber: 10, path: 'images/background.png'),
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Column(
@@ -73,26 +68,11 @@ class Discover extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      Expanded(
-                          child: Container(
-                        child: Transform.scale(scale: 1.7, child: Image.asset('images/Allbutton.png')),
-                      )),
-                      Expanded(child: Container(
-                        margin: EdgeInsets.only(bottom: 25),
-                        child: Transform.scale(scale: 1.7, child: Image.asset('images/BikeButton.png')),
-                      )),
-                      Expanded(child: Container(
-                        margin: EdgeInsets.only(bottom: 50),
-                        child: Transform.scale(scale: 1.7, child: Image.asset('images/Road.png')),
-                      )),
-                      Expanded(child: Container(
-                        margin: EdgeInsets.only(bottom: 75),
-                        child: Transform.scale(scale: 1.2, child: Image.asset('images/Mountain.png')),
-                      )),
-                      Expanded(child: Container(
-                        margin: EdgeInsets.only(bottom: 100),
-                        child: Transform.scale(scale: 1.2,child: Image.asset('images/HelmetButton.png')),
-                      )),
+                      Buttons(scale: 1.7,marginNumber: 0, path: 'images/Allbutton.png',),
+                      Buttons(scale: 1.7,marginNumber: 25, path: 'images/BikeButton.png',),
+                      Buttons(scale: 1.7,marginNumber: 50, path: 'images/Road.png',),
+                      Buttons(scale: 1.2,marginNumber: 75, path: 'images/Mountain.png'),
+                      Buttons(scale: 1.2, marginNumber: 100, path: 'images/HelmetButton.png'),
                     ],
                   ),
                   // Image.asset('images/Rectangle 166.png'),
