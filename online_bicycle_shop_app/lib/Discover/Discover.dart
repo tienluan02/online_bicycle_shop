@@ -13,9 +13,12 @@ class Discover extends StatelessWidget {
               child: Image.asset('images/Rectangle 474.png'),
             ),
             Padding(
+              padding: const EdgeInsets.only(left: 10.0),
+              child: Image.asset('images/background.png'),
+            ),
+            Padding(
               padding: const EdgeInsets.all(16.0),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -41,31 +44,58 @@ class Discover extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Stack(
-                      children: [
-                    Image.asset('images/background.png'),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 100.0, left: 30),
-                          child: Column(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(right: 30.0),
-                                child: Image.asset('images/Electric%20Bicycle.I05 2.png'),
-                              ),
-                              Align(
+                  Container(
+                    child: Stack(children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 50.0, left: 25),
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(right: 30.0),
+                              child: Image.asset(
+                                  'images/Electric%20Bicycle.I05 2.png'),
+                            ),
+                            Align(
                                 alignment: Alignment.bottomLeft,
-                                  child: Text(
-                                      '30% Off',
+                                child: Text(
+                                  '30% Off',
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 25,
                                     color: Color(0xFFA7ABB1),
-                                  ),)
-                              ),
-                            ],
-                          ),
-                        )
-                  ]),
+                                  ),
+                                ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ]),
+                  ),
+                  Row(
+                    children: [
+                      Expanded(
+                          child: Container(
+                        child: Transform.scale(scale: 1.2, child: Image.asset('images/Allbutton.png')),
+                      )),
+                      Expanded(child: Container(
+                        margin: EdgeInsets.only(bottom: 25),
+                        child: Transform.scale(scale: 1.2, child: Image.asset('images/BikeButton.png')),
+                      )),
+                      Expanded(child: Container(
+                        margin: EdgeInsets.only(bottom: 50),
+                        child: Transform.scale(scale: 1.2, child: Image.asset('images/Road.png')),
+                      )),
+                      Expanded(child: Container(
+                        margin: EdgeInsets.only(bottom: 75),
+                        child: Transform.scale(scale: 1.2, child: Image.asset('images/Mountain.png')),
+                      )),
+                      Expanded(child: Container(
+                        margin: EdgeInsets.only(bottom: 100),
+                        child: Transform.scale(scale: 1.2,child: Image.asset('images/HelmetButton.png')),
+                      )),
+                    ],
+                  ),
+                  // Image.asset('images/Rectangle 166.png'),
                 ],
               ),
             ),
@@ -73,7 +103,27 @@ class Discover extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: BottomAppBar(
+        shape: CircularNotchedRectangle(),
+        notchMargin: 6.0,
         color: Color(0xFF2D355E),
+        // child: SafeArea(
+        //   child: BottomNavigationBar(
+        //     items: [
+        //       BottomNavigationBarItem(
+        //         icon: Icon(Icons.directions_bike),
+        //         label: '',
+        //       ),
+        //       BottomNavigationBarItem(
+        //         icon: Icon(Icons.map),
+        //         label: '',
+        //       ),
+        //       BottomNavigationBarItem(
+        //         icon: Icon(Icons.shopping_cart),
+        //         label: '',
+        //       ),
+        //     ],
+        //   ),
+        // ),
       ),
     );
   }
