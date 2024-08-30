@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 
 class Buttons extends StatelessWidget {
-  const Buttons({super.key, required this.scale,required this.marginNumber, required this.path});
+  const Buttons({super.key, required this.scale, required this.path});
 
   final double scale;
   final String path;
-  final double marginNumber;
 
   @override
   Widget build(BuildContext context) {
     return Expanded(
         child: Container(
-          padding: EdgeInsets.only(bottom: marginNumber),
           child: Transform.scale(scale: scale, child: Image.asset(path)),
         ));
   }
