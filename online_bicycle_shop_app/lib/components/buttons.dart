@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class CustomIconButton extends StatelessWidget {
   final String imagePath;
@@ -19,7 +20,7 @@ class CustomIconButton extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
         color: isSelected
-            ? Colors.blue.withOpacity(0.3)
+            ? Colors.blue.withOpacity(0.85)
             : Colors.grey[800]!.withOpacity(0.5),
         boxShadow: [
           BoxShadow(
@@ -35,14 +36,18 @@ class CustomIconButton extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset(imagePath),
+          SvgPicture.asset(
+            imagePath,
+            fit: BoxFit.cover,
+          ),
           if (label != null)
             Padding(
               padding: const EdgeInsets.only(top: 4),
               child: Text(
                 label!,
                 style: TextStyle(
-                  color: isSelected ? Colors.blue : Colors.white.withOpacity(0.7),
+                  color:
+                      isSelected ? Colors.blue : Colors.white.withOpacity(0.7),
                   fontSize: 10,
                 ),
               ),

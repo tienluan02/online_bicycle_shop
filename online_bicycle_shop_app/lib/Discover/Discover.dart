@@ -82,7 +82,23 @@ class Discover extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          CustomIconButton(imagePath: 'images/All_button'),
+                          CustomIconButton(imagePath: 'images/All_button.svg', isSelected: true,),
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 20),
+                            child: CustomIconButton(imagePath: 'images/bike_button.svg', isSelected: false,),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 40),
+                            child: CustomIconButton(imagePath: 'images/road_button.svg', isSelected: false,),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 60),
+                            child: CustomIconButton(imagePath: 'images/mountain_button.svg', isSelected: false,),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 80),
+                            child: CustomIconButton(imagePath: 'images/helmet_button.svg', isSelected: false,),
+                          ),
                         ],
                       )
                   ),
