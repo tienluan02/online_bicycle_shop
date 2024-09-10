@@ -4,12 +4,12 @@ import 'package:flutter_svg/flutter_svg.dart';
 class CustomIconButton extends StatelessWidget {
   final String imagePath;
   final bool isSelected;
-  final String? label;
+  final VoidCallback? onPress;
 
   CustomIconButton({
     required this.imagePath,
     this.isSelected = false,
-    this.label,
+    this.onPress,
   });
 
   @override
@@ -33,26 +33,17 @@ class CustomIconButton extends StatelessWidget {
             ? Border.all(color: Colors.blue.withOpacity(0.5), width: 2)
             : null,
       ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          SvgPicture.asset(
-            imagePath,
-            fit: BoxFit.cover,
-          ),
-          if (label != null)
-            Padding(
-              padding: const EdgeInsets.only(top: 4),
-              child: Text(
-                label!,
-                style: TextStyle(
-                  color:
-                      isSelected ? Colors.blue : Colors.white.withOpacity(0.7),
-                  fontSize: 10,
-                ),
-              ),
+      child: RawMaterialButton(
+        onPressed: onPress,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SvgPicture.asset(
+              imagePath,
+              fit: BoxFit.cover,
             ),
-        ],
+          ],
+        ),
       ),
     );
   }
