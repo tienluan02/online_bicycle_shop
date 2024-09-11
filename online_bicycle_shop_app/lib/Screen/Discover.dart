@@ -173,8 +173,9 @@ class _DiscoverState extends State<Discover> {
                                   Column(
                                     children: [
                                       Padding(
-                                        padding: EdgeInsets.only(left: 80, top: 10),
+                                        padding: EdgeInsets.only(left: 95, top: 10),
                                           child: CustomLikeButton()),
+                                      Image.asset('images/white_bike.png')
                                     ],
                                   ),
                                 ],
@@ -185,9 +186,9 @@ class _DiscoverState extends State<Discover> {
                                   Column(
                                     children: [
                                       Padding(
-                                          padding: EdgeInsets.only(left: 80, top: 10),
+                                          padding: EdgeInsets.only(left: 95, top: 10),
                                           child: CustomLikeButton()),
-                                      Image.asset('images/white_bike.png')
+                                      Image.asset('images/black_bike.png')
                                     ],
                                   ),
                                 ],
@@ -206,8 +207,9 @@ class _DiscoverState extends State<Discover> {
                                     Column(
                                       children: [
                                         Padding(
-                                            padding: EdgeInsets.only(left: 80, top: 10),
+                                            padding: EdgeInsets.only(left: 95, top: 10),
                                             child: CustomLikeButton()),
+                                        Image.asset('images/helmet.png')
                                       ],
                                     ),
                                   ],
@@ -218,8 +220,9 @@ class _DiscoverState extends State<Discover> {
                                     Column(
                                       children: [
                                         Padding(
-                                            padding: EdgeInsets.only(left: 80, top: 10),
+                                            padding: EdgeInsets.only(left: 95, top: 10),
                                             child: CustomLikeButton()),
+                                        Image.asset('images/primary_bike.png')
                                       ],
                                     ),
                                   ],
