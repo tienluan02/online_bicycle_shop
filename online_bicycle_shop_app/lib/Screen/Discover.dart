@@ -12,14 +12,13 @@ class Discover extends StatefulWidget {
 }
 
 class _DiscoverState extends State<Discover> {
-  List<bool> buttonStates = [false, false, false, false, false];
+  List<bool> buttonStates = [true, false, false, false, false];
 
   void selectedButton(int i, List<bool> buttonStates) {
     // Set all buttons to false
     for (int j = 0; j < buttonStates.length; j++) {
       buttonStates[j] = false;
     }
-
     // Set the selected button to true
     if (i >= 0 && i < buttonStates.length) {
       buttonStates[i] = true;
@@ -66,101 +65,143 @@ class _DiscoverState extends State<Discover> {
                 'images/background.png',
                 fit: BoxFit.cover,
               ),
-              Column(
-                children: [
-                  Stack(
-                    children: [
-                      TrapeziumPrimaryContainer(
-                        child: SvgPicture.asset(
-                          'images/background_primary_object.svg',
-                          fit: BoxFit.cover,
+              SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Stack(
+                      children: [
+                        TrapeziumPrimaryContainer(
+                          child: SvgPicture.asset(
+                            'images/background_primary_object.svg',
+                            fit: BoxFit.cover,
+                          ),
                         ),
-                      ),
-                      Center(
-                        child: Padding(
-                          padding: const EdgeInsets.only(top: 25.0),
-                          child: Column(
-                            children: [
-                              Image.asset('images/primary_bike.png'),
-                              const Padding(
-                                padding: EdgeInsets.only(right: 180),
-                                child: Text(
-                                  '30% Off',
-                                  style: TextStyle(
-                                    color: Color(0xFFA7ABB1),
-                                    fontSize: 30,
-                                    fontWeight: FontWeight.bold,
+                        Center(
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 25.0),
+                            child: Column(
+                              children: [
+                                Image.asset('images/primary_bike.png'),
+                                const Padding(
+                                  padding: EdgeInsets.only(right: 180),
+                                  child: Text(
+                                    '30% Off',
+                                    style: TextStyle(
+                                      color: Color(0xFFA7ABB1),
+                                      fontSize: 30,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
                                 ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Container(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          CustomIconButton(
+                            imagePath: 'images/All_button.svg',
+                            isSelected: buttonStates[0],
+                            onPress: () {
+                              setState(() {
+                                selectedButton(0, buttonStates);
+                              });
+                            },
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 20),
+                            child: CustomIconButton(
+                                imagePath: 'images/bike_button.svg',
+                                isSelected: buttonStates[1],
+                                onPress: () {
+                                  setState(() {
+                                    selectedButton(1, buttonStates);
+                                  });
+                                }),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 40),
+                            child: CustomIconButton(
+                                imagePath: 'images/road_button.svg',
+                                isSelected: buttonStates[2],
+                                onPress: () {
+                                  setState(() {
+                                    selectedButton(2, buttonStates);
+                                  });
+                                }),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 60),
+                            child: CustomIconButton(
+                              imagePath: 'images/mountain_button.svg',
+                              isSelected: buttonStates[3],
+                              onPress: () {
+                                setState(() {
+                                  selectedButton(3, buttonStates);
+                                });
+                              },
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 80),
+                            child: CustomIconButton(
+                              imagePath: 'images/helmet_button.svg',
+                              isSelected: buttonStates[4],
+                              onPress: () {
+                                setState(() {
+                                  selectedButton(4, buttonStates);
+                                });
+                              },
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Column(
+                            children: [
+                              Stack(
+                                children: [
+                                  ItemContainer(),
+                                ],
+                              ),
+                              Stack(
+                                children: [
+                                  ItemContainer(),
+                                ],
                               ),
                             ],
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                  Container(
-                      child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      CustomIconButton(
-                        imagePath: 'images/All_button.svg',
-                        isSelected: buttonStates[0],
-                        onPress: () {
-                          setState(() {
-                            selectedButton(0, buttonStates);
-                          });
-                        },
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 20),
-                        child: CustomIconButton(
-                            imagePath: 'images/bike_button.svg',
-                            isSelected: buttonStates[1],
-                            onPress: () {
-                              setState(() {
-                                selectedButton(1, buttonStates);
-                              });
-                            }),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 40),
-                        child: CustomIconButton(
-                            imagePath: 'images/road_button.svg',
-                            isSelected: buttonStates[2],
-                            onPress: () {
-                              setState(() {
-                                selectedButton(2, buttonStates);
-                              });
-                            }),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 60),
-                        child: CustomIconButton(
-                          imagePath: 'images/mountain_button.svg',
-                          isSelected: buttonStates[3],
-                          onPress: () {
-                            setState(() {
-                              selectedButton(3, buttonStates);
-                            });
-                          },
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.only(bottom: 50.0),
+                            child: Column(
+                              children: [
+                                Stack(
+                                  children: [
+                                    ItemContainer(),
+                                  ],
+                                ),
+                                Stack(
+                                  children: [
+                                    ItemContainer(),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
                         ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 80),
-                        child: CustomIconButton(
-                          imagePath: 'images/helmet_button.svg',
-                          isSelected: buttonStates[4],
-                          onPress: () {
-                            setState(() {
-                              selectedButton(4, buttonStates);
-                            });
-                          },
-                        ),
-                      ),
-                    ],
-                  )),
-                ],
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
