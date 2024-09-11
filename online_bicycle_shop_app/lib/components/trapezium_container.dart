@@ -70,8 +70,11 @@ class ItemContainer extends StatelessWidget {
         child: OverflowBox(
           maxWidth: 400,
           maxHeight: 400,
-          child: SvgPicture.asset(
-            'images/item_background.svg',
+          child: Padding(
+            padding: EdgeInsets.only(left: 30),
+            child: SvgPicture.asset(
+              'images/item_background.svg',
+            ),
           ),
         ),
       ),

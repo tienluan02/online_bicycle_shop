@@ -173,7 +173,7 @@ class _DiscoverState extends State<Discover> {
                                   Column(
                                     children: [
                                       Padding(
-                                        padding: EdgeInsets.only(left: 60, top: 10),
+                                        padding: EdgeInsets.only(left: 80, top: 10),
                                           child: CustomLikeButton()),
                                     ],
                                   ),
@@ -185,8 +185,9 @@ class _DiscoverState extends State<Discover> {
                                   Column(
                                     children: [
                                       Padding(
-                                          padding: EdgeInsets.only(left: 60, top: 10),
+                                          padding: EdgeInsets.only(left: 80, top: 10),
                                           child: CustomLikeButton()),
+                                      Image.asset('images/white_bike.png')
                                     ],
                                   ),
                                 ],
@@ -205,7 +206,7 @@ class _DiscoverState extends State<Discover> {
                                     Column(
                                       children: [
                                         Padding(
-                                            padding: EdgeInsets.only(left: 60, top: 10),
+                                            padding: EdgeInsets.only(left: 80, top: 10),
                                             child: CustomLikeButton()),
                                       ],
                                     ),
@@ -217,7 +218,7 @@ class _DiscoverState extends State<Discover> {
                                     Column(
                                       children: [
                                         Padding(
-                                            padding: EdgeInsets.only(left: 60, top: 10),
+                                            padding: EdgeInsets.only(left: 80, top: 10),
                                             child: CustomLikeButton()),
                                       ],
                                     ),
