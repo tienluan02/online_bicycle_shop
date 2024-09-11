@@ -4,6 +4,7 @@ import '../components/sorting_button.dart';
 import '../components/trapezium_container.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../components/like_button.dart';
+import '../components/constant.dart';
 
 class Discover extends StatefulWidget {
   const Discover({super.key});
@@ -175,7 +176,20 @@ class _DiscoverState extends State<Discover> {
                                       Padding(
                                         padding: EdgeInsets.only(left: 95, top: 10),
                                           child: CustomLikeButton()),
-                                      Image.asset('images/white_bike.png')
+                                      Image.asset('images/white_bike.png'),
+                                      SizedBox(height: 20,),
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.baseline,
+                                        textBaseline: TextBaseline.alphabetic,
+                                        children: [
+                                          Text('Road Bike',
+                                            style: itemType,),
+                                          Text('PEUGEOT - LR01',
+                                            style: itemName,),
+                                          Text('1,999.99',
+                                            style: itemPrize,),
+                                        ],
+                                      ),
                                     ],
                                   ),
                                 ],
@@ -188,7 +202,20 @@ class _DiscoverState extends State<Discover> {
                                       Padding(
                                           padding: EdgeInsets.only(left: 95, top: 10),
                                           child: CustomLikeButton()),
-                                      Image.asset('images/black_bike.png')
+                                      Image.asset('images/black_bike.png'),
+                                      SizedBox(height: 20,),
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.baseline,
+                                        textBaseline: TextBaseline.alphabetic,
+                                        children: [
+                                          Text('Road Bike',
+                                            style: itemType,),
+                                          Text('PEUGEOT - LR02',
+                                            style: itemName,),
+                                          Text('2,999.99',
+                                            style: itemPrize,),
+                                        ],
+                                      ),
                                     ],
                                   ),
                                 ],
@@ -209,7 +236,20 @@ class _DiscoverState extends State<Discover> {
                                         Padding(
                                             padding: EdgeInsets.only(left: 95, top: 10),
                                             child: CustomLikeButton()),
-                                        Image.asset('images/helmet.png')
+                                        Image.asset('images/helmet.png'),
+                                        SizedBox(height: 10,),
+                                        Column(
+                                          crossAxisAlignment: CrossAxisAlignment.baseline,
+                                          textBaseline: TextBaseline.alphabetic,
+                                          children: [
+                                            Text('Road Helmet',
+                                              style: itemType,),
+                                            Text('SMITH - TRADE',
+                                              style: itemName,),
+                                            Text('120',
+                                              style: itemPrize,),
+                                          ],
+                                        ),
                                       ],
                                     ),
                                   ],
@@ -222,7 +262,20 @@ class _DiscoverState extends State<Discover> {
                                         Padding(
                                             padding: EdgeInsets.only(left: 95, top: 10),
                                             child: CustomLikeButton()),
-                                        Image.asset('images/primary_bike.png')
+                                        Image.asset('images/primary_bike.png'),
+                                        SizedBox(height: 10,),
+                                        Column(
+                                          crossAxisAlignment: CrossAxisAlignment.baseline,
+                                          textBaseline: TextBaseline.alphabetic,
+                                          children: [
+                                            Text('Road Bike',
+                                              style: itemType,),
+                                            Text('PEUGEOT - LR03',
+                                              style: itemName,),
+                                            Text('3,999.99',
+                                              style: itemPrize,),
+                                          ],
+                                        ),
                                       ],
                                     ),
                                   ],
