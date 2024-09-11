@@ -79,24 +79,4 @@ class ItemContainer extends StatelessWidget {
   }
 }
 
-class TrapeziumItemClipper extends CustomClipper<Path> {
-  @override
-  Path getClip(Size size) {
-    Path path = Path();
-
-    // Define the trapezium points
-    path.moveTo(0, 300 * 0.25); // Top-left point (x10% from left)
-    path.lineTo(size.width * 0.83, 300 * 0.15); // Top-right point (x90% from left)
-    path.lineTo(size.width * 0.83, 310 * 0.9); // Bottom-right point
-    path.lineTo(0, 300 * 0.98); // Bottom-left point
-    path.close(); // Closes the path and draws the trapezium
-
-    return path;
-  }
-
-  @override
-  bool shouldReclip(CustomClipper<Path> oldClipper) {
-    return false; // If the clipping path doesn't change, no need to reclip
-  }
-}
 

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import '../components/bottom_bar.dart';
-import '../components/buttons.dart';
+import '../components/sorting_button.dart';
 import '../components/trapezium_container.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import '../components/like_button.dart';
 
 class Discover extends StatefulWidget {
   const Discover({super.key});
@@ -169,11 +170,25 @@ class _DiscoverState extends State<Discover> {
                               Stack(
                                 children: [
                                   ItemContainer(),
+                                  Column(
+                                    children: [
+                                      Padding(
+                                        padding: EdgeInsets.only(left: 60, top: 10),
+                                          child: CustomLikeButton()),
+                                    ],
+                                  ),
                                 ],
                               ),
                               Stack(
                                 children: [
                                   ItemContainer(),
+                                  Column(
+                                    children: [
+                                      Padding(
+                                          padding: EdgeInsets.only(left: 60, top: 10),
+                                          child: CustomLikeButton()),
+                                    ],
+                                  ),
                                 ],
                               ),
                             ],
@@ -187,11 +202,25 @@ class _DiscoverState extends State<Discover> {
                                 Stack(
                                   children: [
                                     ItemContainer(),
+                                    Column(
+                                      children: [
+                                        Padding(
+                                            padding: EdgeInsets.only(left: 60, top: 10),
+                                            child: CustomLikeButton()),
+                                      ],
+                                    ),
                                   ],
                                 ),
                                 Stack(
                                   children: [
                                     ItemContainer(),
+                                    Column(
+                                      children: [
+                                        Padding(
+                                            padding: EdgeInsets.only(left: 60, top: 10),
+                                            child: CustomLikeButton()),
+                                      ],
+                                    ),
                                   ],
                                 ),
                               ],
