@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Screen/Discover.dart';
+import 'Screen/discover.dart';
 
 void main() {
   runApp(const MyApp());

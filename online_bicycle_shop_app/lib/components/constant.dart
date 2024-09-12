@@ -1,22 +1,21 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
-const backgroundColor = Color(0xFF242C3B);
-const selectedItem = Color(0xFF222834);
-const fontColor = Color(0xFFA7ABB1);
-const itemType = TextStyle(
-  color: fontColor,
+const kBackgroundColor = Color(0xFF242C3B);
+const kSelectedItem = Color(0xFF222834);
+const kFontColor = Color(0xFFA7ABB1);
+const kItemType = TextStyle(
+  color: kFontColor,
   fontSize: 15,
   fontWeight: FontWeight.bold,
 );
-const itemName = TextStyle(
+const kItemName = TextStyle(
   color: Colors.white,
   fontWeight: FontWeight.bold,
   fontSize: 16,
 );
-const itemPrize = TextStyle(
-  color: fontColor,
+const kItemPrize = TextStyle(
+  color: kFontColor,
   fontSize: 15,
   fontStyle: FontStyle.italic,
 );

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class TrapeziumPrimaryContainer extends StatelessWidget {
   final Widget child;
@@ -24,7 +23,6 @@ class TrapeziumClipper extends CustomClipper<Path> {
   Path getClip(Size size) {
     Path path = Path();
 
-    // Define the trapezium points
     path.moveTo(0, 0); // Top-left point (x10% from left)
     path.lineTo(size.width, 0); // Top-right point (x90% from left)
     path.lineTo(size.width, size.height * 0.82); // Bottom-right point
@@ -36,50 +34,6 @@ class TrapeziumClipper extends CustomClipper<Path> {
 
   @override
   bool shouldReclip(CustomClipper<Path> oldClipper) {
-    return false; // If the clipping path doesn't change, no need to reclip
+    return false;
   }
 }
-
-class TrapeziumButtonContainer extends StatelessWidget {
-  final Widget child;
-  const TrapeziumButtonContainer({super.key, required this.child});
-
-  @override
-  Widget build(BuildContext context) {
-    return ClipPath(
-      clipper: TrapeziumClipper(),
-      child: Container(
-        width: double.infinity,
-        height: 100,
-        child: child,
-      ),
-    );
-  }
-}
-
-class ItemContainer extends StatelessWidget {
-  const ItemContainer({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 300,
-      height: 260,
-      child: Padding(
-        padding: const EdgeInsets.only(left: 8.0),
-        child: OverflowBox(
-          maxWidth: 400,
-          maxHeight: 400,
-          child: Padding(
-            padding: EdgeInsets.only(left: 30),
-            child: SvgPicture.asset(
-              'images/item_background.svg',
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-

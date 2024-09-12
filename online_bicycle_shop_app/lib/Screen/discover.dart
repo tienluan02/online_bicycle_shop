@@ -3,8 +3,8 @@ import '../components/bottom_bar.dart';
 import '../components/sorting_button.dart';
 import '../components/trapezium_container.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../components/like_button.dart';
 import '../components/constant.dart';
+import '../components/itemContainer.dart';
 
 class Discover extends StatefulWidget {
   const Discover({super.key});
@@ -30,7 +30,7 @@ class _DiscoverState extends State<Discover> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF242C3B),
+      backgroundColor: kBackgroundColor,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         title: Row(
@@ -63,12 +63,14 @@ class _DiscoverState extends State<Discover> {
           padding: EdgeInsets.symmetric(horizontal: 16),
           child: Stack(
             children: [
-              Image.asset(
-                'images/background.png',
-                fit: BoxFit.cover,
+              OverflowBox(
+                child: Image.asset(
+                  'images/background.png',
+                ),
               ),
               SingleChildScrollView(
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     Stack(
                       children: [
@@ -168,57 +170,17 @@ class _DiscoverState extends State<Discover> {
                         Expanded(
                           child: Column(
                             children: [
-                              Stack(
-                                children: [
-                                  ItemContainer(),
-                                  Column(
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsets.only(left: 95, top: 10),
-                                          child: CustomLikeButton()),
-                                      Image.asset('images/white_bike.png'),
-                                      SizedBox(height: 20,),
-                                      Column(
-                                        crossAxisAlignment: CrossAxisAlignment.baseline,
-                                        textBaseline: TextBaseline.alphabetic,
-                                        children: [
-                                          Text('Road Bike',
-                                            style: itemType,),
-                                          Text('PEUGEOT - LR01',
-                                            style: itemName,),
-                                          Text('1,999.99',
-                                            style: itemPrize,),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                ],
+                              ItemContainer(
+                                itemImagePath: 'images/white_bike.png',
+                                itemType: 'Road Bike',
+                                itemName: 'PEUGEOT -LR01',
+                                itemPrice: '1,999.99',
                               ),
-                              Stack(
-                                children: [
-                                  ItemContainer(),
-                                  Column(
-                                    children: [
-                                      Padding(
-                                          padding: EdgeInsets.only(left: 95, top: 10),
-                                          child: CustomLikeButton()),
-                                      Image.asset('images/black_bike.png'),
-                                      SizedBox(height: 20,),
-                                      Column(
-                                        crossAxisAlignment: CrossAxisAlignment.baseline,
-                                        textBaseline: TextBaseline.alphabetic,
-                                        children: [
-                                          Text('Road Bike',
-                                            style: itemType,),
-                                          Text('PEUGEOT - LR02',
-                                            style: itemName,),
-                                          Text('2,999.99',
-                                            style: itemPrize,),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                ],
+                              ItemContainer(
+                                itemImagePath: 'images/black_bike.png',
+                                itemType: 'Road Bike',
+                                itemName: 'PEUGEOT -LR02',
+                                itemPrice: '2,999.99',
                               ),
                             ],
                           ),
@@ -228,57 +190,17 @@ class _DiscoverState extends State<Discover> {
                             padding: const EdgeInsets.only(bottom: 50.0),
                             child: Column(
                               children: [
-                                Stack(
-                                  children: [
-                                    ItemContainer(),
-                                    Column(
-                                      children: [
-                                        Padding(
-                                            padding: EdgeInsets.only(left: 95, top: 10),
-                                            child: CustomLikeButton()),
-                                        Image.asset('images/helmet.png'),
-                                        SizedBox(height: 10,),
-                                        Column(
-                                          crossAxisAlignment: CrossAxisAlignment.baseline,
-                                          textBaseline: TextBaseline.alphabetic,
-                                          children: [
-                                            Text('Road Helmet',
-                                              style: itemType,),
-                                            Text('SMITH - TRADE',
-                                              style: itemName,),
-                                            Text('120',
-                                              style: itemPrize,),
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                  ],
+                                ItemContainer(
+                                    itemImagePath: 'images/helmet.png',
+                                    itemType: 'Road Helmet',
+                                    itemName: 'SMITH -TRADE',
+                                    itemPrice: 120.toString(),
                                 ),
-                                Stack(
-                                  children: [
-                                    ItemContainer(),
-                                    Column(
-                                      children: [
-                                        Padding(
-                                            padding: EdgeInsets.only(left: 95, top: 10),
-                                            child: CustomLikeButton()),
-                                        Image.asset('images/primary_bike.png'),
-                                        SizedBox(height: 10,),
-                                        Column(
-                                          crossAxisAlignment: CrossAxisAlignment.baseline,
-                                          textBaseline: TextBaseline.alphabetic,
-                                          children: [
-                                            Text('Road Bike',
-                                              style: itemType,),
-                                            Text('PEUGEOT - LR03',
-                                              style: itemName,),
-                                            Text('3,999.99',
-                                              style: itemPrize,),
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                  ],
+                                ItemContainer(
+                                  itemImagePath: 'images/primary_bike.png',
+                                  itemType: 'Road Bike',
+                                  itemName: 'PEUGEOT - LR03',
+                                  itemPrice: '3,999.99',
                                 ),
                               ],
                             ),
