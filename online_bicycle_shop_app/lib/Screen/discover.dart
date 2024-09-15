@@ -162,20 +162,19 @@ class _DiscoverState extends State<Discover> {
                         ),
                       ],
                     ),
-                    CreatePrimaryContainer(child: Text('thu')),
+                    // CreatePrimaryContainer(child: Text('thu')),
                     Row(
                       children: [
                         Expanded(
                           child: Column(
                             children: [
-                              CreateItemContainer(child: Text('test')),
-                              ItemContainer(
+                              CreateItemContainer(
                                 itemImagePath: 'images/white_bike.png',
                                 itemType: 'Road Bike',
                                 itemName: 'PEUGEOT -LR01',
                                 itemPrice: '1,999.99',
                               ),
-                              ItemContainer(
+                              CreateItemContainer(
                                 itemImagePath: 'images/black_bike.png',
                                 itemType: 'Road Bike',
                                 itemName: 'PEUGEOT -LR02',
@@ -189,13 +188,13 @@ class _DiscoverState extends State<Discover> {
                             padding: const EdgeInsets.only(bottom: 50.0),
                             child: Column(
                               children: [
-                                ItemContainer(
+                                CreateItemContainer(
                                     itemImagePath: 'images/helmet.png',
                                     itemType: 'Road Helmet',
                                     itemName: 'SMITH -TRADE',
                                     itemPrice: 120.toString(),
                                 ),
-                                ItemContainer(
+                                CreateItemContainer(
                                   itemImagePath: 'images/primary_bike.png',
                                   itemType: 'Road Bike',
                                   itemName: 'PEUGEOT - LR03',
