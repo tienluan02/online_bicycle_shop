@@ -100,17 +100,34 @@ class _CreateItemContainerState extends State<CreateItemContainer> {
         width: 165,
           height: 260,
         decoration: BoxDecoration(
-          color: Color.fromRGBO(42, 57, 86, 0.8),
-          borderRadius: BorderRadius.circular(10),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.2),
-              blurRadius: 10,
-              spreadRadius: 2,
-              offset: Offset(5, 5),
-            ),
-          ],
+      gradient: LinearGradient(
+      begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+        colors: [
+          Color(0x99353F54),
+          Color(0x99222834),
+        ],
+      ),
+      borderRadius: BorderRadius.circular(10),
+      border: Border.all(
+        width: 2,
+        color: Colors.transparent,
+      ),
+      boxShadow: [
+        BoxShadow(
+          color: Color(0x9910141C),
+          blurRadius: 60,
+          spreadRadius: 0,
+          offset: Offset(0, 20),
         ),
+        BoxShadow(
+          color: Color(0x803B475F),
+          blurRadius: 60,
+          spreadRadius: 0,
+          offset: Offset(0, -20),
+        ),
+      ],
+    ),
         child: Center(child: widget.child),
       ),
     );
