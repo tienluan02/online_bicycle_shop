@@ -4,7 +4,7 @@ import '../components/sorting_button.dart';
 import '../components/trapezium_container.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../components/constant.dart';
-import '../components/itemContainer.dart';
+import '../components/item_container.dart';
 
 class Discover extends StatefulWidget {
   const Discover({super.key});
@@ -36,7 +36,7 @@ class _DiscoverState extends State<Discover> {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
+            const Text(
               'Choose Your Bike',
               style: TextStyle(
                 color: Colors.white,
@@ -49,7 +49,7 @@ class _DiscoverState extends State<Discover> {
               child: Container(
                 color: Colors.blueAccent,
                 padding: EdgeInsets.all(10),
-                child: Icon(
+                child: const Icon(
                   Icons.search,
                   color: Colors.white,
                 ),
@@ -60,7 +60,7 @@ class _DiscoverState extends State<Discover> {
       ),
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16),
+          padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Stack(
             children: [
               OverflowBox(
@@ -70,7 +70,6 @@ class _DiscoverState extends State<Discover> {
               ),
               SingleChildScrollView(
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     Stack(
                       children: [
@@ -103,73 +102,73 @@ class _DiscoverState extends State<Discover> {
                         ),
                       ],
                     ),
-                    Container(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          CustomIconButton(
-                            imagePath: 'images/All_button.svg',
-                            isSelected: buttonStates[0],
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        CustomIconButton(
+                          imagePath: 'images/All_button.svg',
+                          isSelected: buttonStates[0],
+                          onPress: () {
+                            setState(() {
+                              selectedButton(0, buttonStates);
+                            });
+                          },
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 20),
+                          child: CustomIconButton(
+                              imagePath: 'images/bike_button.svg',
+                              isSelected: buttonStates[1],
+                              onPress: () {
+                                setState(() {
+                                  selectedButton(1, buttonStates);
+                                });
+                              }),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 40),
+                          child: CustomIconButton(
+                              imagePath: 'images/road_button.svg',
+                              isSelected: buttonStates[2],
+                              onPress: () {
+                                setState(() {
+                                  selectedButton(2, buttonStates);
+                                });
+                              }),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 60),
+                          child: CustomIconButton(
+                            imagePath: 'images/mountain_button.svg',
+                            isSelected: buttonStates[3],
                             onPress: () {
                               setState(() {
-                                selectedButton(0, buttonStates);
+                                selectedButton(3, buttonStates);
                               });
                             },
                           ),
-                          Padding(
-                            padding: const EdgeInsets.only(bottom: 20),
-                            child: CustomIconButton(
-                                imagePath: 'images/bike_button.svg',
-                                isSelected: buttonStates[1],
-                                onPress: () {
-                                  setState(() {
-                                    selectedButton(1, buttonStates);
-                                  });
-                                }),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 80),
+                          child: CustomIconButton(
+                            imagePath: 'images/helmet_button.svg',
+                            isSelected: buttonStates[4],
+                            onPress: () {
+                              setState(() {
+                                selectedButton(4, buttonStates);
+                              });
+                            },
                           ),
-                          Padding(
-                            padding: const EdgeInsets.only(bottom: 40),
-                            child: CustomIconButton(
-                                imagePath: 'images/road_button.svg',
-                                isSelected: buttonStates[2],
-                                onPress: () {
-                                  setState(() {
-                                    selectedButton(2, buttonStates);
-                                  });
-                                }),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(bottom: 60),
-                            child: CustomIconButton(
-                              imagePath: 'images/mountain_button.svg',
-                              isSelected: buttonStates[3],
-                              onPress: () {
-                                setState(() {
-                                  selectedButton(3, buttonStates);
-                                });
-                              },
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(bottom: 80),
-                            child: CustomIconButton(
-                              imagePath: 'images/helmet_button.svg',
-                              isSelected: buttonStates[4],
-                              onPress: () {
-                                setState(() {
-                                  selectedButton(4, buttonStates);
-                                });
-                              },
-                            ),
-                          ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
+                    CreatePrimaryContainer(child: Text('thu')),
                     Row(
                       children: [
                         Expanded(
                           child: Column(
                             children: [
+                              CreateItemContainer(child: Text('test')),
                               ItemContainer(
                                 itemImagePath: 'images/white_bike.png',
                                 itemType: 'Road Bike',
@@ -215,7 +214,7 @@ class _DiscoverState extends State<Discover> {
           ),
         ),
       ),
-      bottomNavigationBar: CustomNavBarCurved(),
+      bottomNavigationBar: const CustomNavBarCurved(),
     );
   }
 }
